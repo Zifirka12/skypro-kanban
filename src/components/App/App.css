@@ -25,7 +25,6 @@ ul li {
     list-style: none;
 }
 
-<<<<<<< HEAD
 .loading-message {
     position: fixed;
     top: 50%;
@@ -36,8 +35,6 @@ ul li {
     color: #333;
 }
 
-=======
->>>>>>> origin/main
 @keyframes card-animation {
     0% {
         height: 0;
@@ -48,10 +45,7 @@ ul li {
         opacity: 1;
     }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 html,
 body {
     width: 100%;
@@ -83,10 +77,7 @@ body {
 .header__user:hover {
     color: #33399b;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 ._hover02:hover::after,
 .header__user:hover::after {
     border-left-color: #33399b;
@@ -97,10 +88,7 @@ body {
     background-color: #33399b;
     color: #ffffff;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 ._hover03:hover a {
     color: #ffffff;
 }
@@ -153,10 +141,7 @@ body {
     left: 0;
     z-index: 5;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-exit__container {
     width: 100%;
     height: 100%;
@@ -168,10 +153,7 @@ body {
     justify-content: center;
     background: rgba(0, 0, 0, 0.4);
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-exit__block {
     display: block;
     margin: 0 auto;
@@ -183,10 +165,7 @@ body {
     border: 0.7px solid #d4dbe5;
     box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.13);
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-exit__ttl h2 {
     text-align: center;
     font-size: 20px;
@@ -195,10 +174,7 @@ body {
     letter-spacing: -0.4px;
     margin-bottom: 20px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-exit__exit-yes {
     width: 153px;
     height: 30px;
@@ -216,10 +192,7 @@ body {
     color: #ffffff;
     margin-right: 10px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-exit__exit-yes a {
     width: 100%;
     height: 100%;
@@ -228,10 +201,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-exit__exit-no {
     width: 153px;
     height: 30px;
@@ -248,10 +218,7 @@ body {
     letter-spacing: -0.14px;
     color: #ffffff;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-exit__exit-no a {
     width: 100%;
     height: 100%;
@@ -260,10 +227,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-exit__form-group {
     width: 100%;
     display: flex;
@@ -279,10 +243,7 @@ body {
     letter-spacing: -0.14px;
     margin-bottom: 4px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-user-set__mail {
     color: #94a6be;
     font-size: 14px;
@@ -290,30 +251,21 @@ body {
     letter-spacing: -0.14px;
     margin-bottom: 10px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-user-set__theme {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-user-set__theme p {
     color: #000;
     font-size: 14px;
     line-height: 21px;
     letter-spacing: -0.14px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-user-set__theme input[type="checkbox"] {
     position: relative;
     width: 24px;
@@ -325,10 +277,7 @@ body {
     -moz-appearance: none;
     appearance: none;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-user-set__theme input[type="checkbox"]::before {
     content: "";
     position: absolute;
@@ -340,17 +289,11 @@ body {
     background-color: #94a6be;
     transition: 0.5s;
 }
-<<<<<<< HEAD
 
 .pop-user-set__theme input:checked[type="checkbox"]::before {
     left: 12px;
 }
 
-=======
-.pop-user-set__theme input:checked[type="checkbox"]::before {
-    left: 12px;
-}
->>>>>>> origin/main
 .pop-user-set button {
     width: 72px;
     height: 30px;
@@ -359,136 +302,11 @@ body {
     border-radius: 4px;
     border: 1px solid #565eef;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .pop-user-set button a {
     color: #565eef;
 }
 
-<<<<<<< HEAD
-=======
-.pop-new-card {
-    display: none;
-    width: 100%;
-    min-width: 375px;
-    height: 100%;
-    min-height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 6;
-}
-.pop-new-card__container {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    padding: 0 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.4);
-}
-.pop-new-card__block {
-    display: block;
-    margin: 0 auto;
-    background-color: #ffffff;
-    max-width: 630px;
-    width: 100%;
-    padding: 40px 30px 48px;
-    border-radius: 10px;
-    border: 0.7px solid #d4dbe5;
-    position: relative;
-}
-.pop-new-card__content {
-    display: block;
-    text-align: left;
-}
-.pop-new-card__ttl {
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 24px;
-    margin-bottom: 20px;
-}
-.pop-new-card__close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #94a6be;
-    cursor: pointer;
-}
-.pop-new-card__close:hover {
-    color: #000000;
-}
-.pop-new-card__wrap {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.pop-new-card__form {
-    max-width: 370px;
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.form-new__block {
-    display: flex;
-    flex-direction: column;
-}
-.form-new__input,
-.form-new__area {
-    width: 100%;
-    outline: none;
-    padding: 14px;
-    background: transparent;
-    border: 0.7px solid rgba(148, 166, 190, 0.4);
-    border-radius: 8px;
-    font-size: 14px;
-    line-height: 1;
-    letter-spacing: -0.14px;
-}
-.form-new__input::-moz-placeholder,
-.form-new__area::-moz-placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1px;
-    color: #94a6be;
-    letter-spacing: -0.14px;
-}
-.form-new__input::placeholder,
-.form-new__area::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1px;
-    color: #94a6be;
-    letter-spacing: -0.14px;
-}
-.form-new__input {
-    margin: 20px 0;
-}
-.form-new__area {
-    max-width: 370px;
-    margin-top: 14px;
-    height: 200px;
-}
-.form-new__create {
-    width: 132px;
-    height: 30px;
-    background-color: #565eef;
-    border-radius: 4px;
-    border: 0;
-    outline: none;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    color: #ffffff;
-    float: right;
-}
->>>>>>> origin/main
 
 .subttl {
     color: #000;
@@ -497,91 +315,7 @@ body {
     line-height: 1;
 }
 
-<<<<<<< HEAD
 
-=======
-.calendar {
-    width: 182px;
-    margin-bottom: 20px;
-}
-.calendar__ttl {
-    margin-bottom: 14px;
-    padding: 0 7px;
-}
-.calendar__p {
-    color: #94a6be;
-    font-size: 10px;
-    line-height: 1;
-}
-.calendar__p span {
-    color: #000000;
-}
-.calendar__block {
-    display: block;
-}
-.calendar__month {
-    color: #94a6be;
-    font-size: 14px;
-    line-height: 25px;
-    font-weight: 600;
-}
-.calendar__content {
-    margin-bottom: 12px;
-}
-.calendar__days-names {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 7px 0;
-    padding: 0 7px;
-}
-.calendar__day-name {
-    color: #94a6be;
-    font-size: 10px;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: -0.2px;
-}
-.calendar__cells {
-    width: 182px;
-    height: 126px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.calendar__cell {
-    width: 22px;
-    height: 22px;
-    margin: 2px;
-    border-radius: 50%;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    color: #94a6be;
-    font-size: 10px;
-    line-height: 1;
-    letter-spacing: -0.2px;
-    cursor: pointer;
-}
-.calendar__nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 14px;
-    padding: 0 7px;
-}
-.calendar__period {
-    padding: 0 7px;
-}
-
-.nav__actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
->>>>>>> origin/main
 .nav__action {
     width: 18px;
     height: 25px;
@@ -590,10 +324,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .nav__action svg {
     fill: #94a6be;
 }
@@ -619,27 +350,18 @@ body {
 .categories {
     margin-bottom: 20px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .categories__themes {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: flex-start;
 }
-<<<<<<< HEAD
 
 .categories__p {
     margin-bottom: 14px;
 }
 
-=======
-.categories__p {
-    margin-bottom: 14px;
-}
->>>>>>> origin/main
 .categories__theme {
     display: inline-block;
     width: auto;
@@ -649,10 +371,7 @@ body {
     margin-right: 7px;
     opacity: 0.4;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .categories__theme p {
     font-size: 14px;
     font-weight: 600;
@@ -660,154 +379,22 @@ body {
     white-space: nowrap;
 }
 
-<<<<<<< HEAD
-=======
-.pop-browse {
-    display: none;
-    width: 100%;
-    height: 100%;
-    min-width: 375px;
-    min-height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 7;
-}
-.pop-browse__container {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    padding: 0 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.4);
-}
-.pop-browse__block {
-    display: block;
-    margin: 0 auto;
-    background-color: #ffffff;
-    max-width: 630px;
-    width: 100%;
-    padding: 40px 30px 38px;
-    border-radius: 10px;
-    border: 0.7px solid #d4dbe5;
-    position: relative;
-}
-.pop-browse__content {
-    display: block;
-    text-align: left;
-}
-.pop-browse__content .categories__theme {
-    opacity: 1;
-}
-.pop-browse__content .theme-down {
-    display: none;
-    margin-bottom: 20px;
-}
-.pop-browse__content .theme-top {
-    display: block;
-}
-.pop-browse__top-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 18px;
-}
-.pop-browse__ttl {
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 24px;
-}
-.pop-browse__wrap {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.pop-browse__form {
-    max-width: 370px;
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-}
-.pop-browse__btn-browse,
-.pop-browse__btn-edit {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.pop-browse__btn-browse button,
-.pop-browse__btn-edit button {
-    height: 30px;
-    margin-bottom: 10px;
-    padding: 0 14px;
-}
-.pop-browse__btn-browse .btn-group button,
-.pop-browse__btn-edit .btn-group button {
-    margin-right: 8px;
-}
-
-.form-browse__block {
-    display: flex;
-    flex-direction: column;
-}
-.form-browse__area {
-    max-width: 370px;
-    width: 100%;
-    outline: none;
-    padding: 14px;
-    background: #eaeef6;
-    border: 0.7px solid rgba(148, 166, 190, 0.4);
-    border-radius: 8px;
-    font-size: 14px;
-    line-height: 1;
-    letter-spacing: -0.14px;
-    margin-top: 14px;
-    height: 200px;
-}
-.form-browse__area::-moz-placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1px;
-    color: #94a6be;
-    letter-spacing: -0.14px;
-}
-.form-browse__area::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1px;
-    color: #94a6be;
-    letter-spacing: -0.14px;
-}
->>>>>>> origin/main
 
 .status {
     margin-bottom: 11px;
 }
-<<<<<<< HEAD
 
 .status__p {
     margin-bottom: 14px;
 }
 
-=======
-.status__p {
-    margin-bottom: 14px;
-}
->>>>>>> origin/main
 .status__themes {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .status__theme {
     border-radius: 24px;
     border: 0.7px solid rgba(148, 166, 190, 0.4);
@@ -816,10 +403,7 @@ body {
     margin-right: 7px;
     margin-bottom: 7px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .status__theme p {
     font-size: 14px;
     line-height: 1;
@@ -833,10 +417,7 @@ body {
     background: transparent;
     color: #565eef;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 ._btn-bor a {
     color: #565eef;
 }
@@ -848,10 +429,7 @@ body {
     outline: none;
     color: #ffffff;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 ._btn-bg a {
     color: #ffffff;
 }
@@ -869,10 +447,7 @@ body {
     margin: 0 auto;
     background-color: #ffffff;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .header__block {
     height: 70px;
     display: flex;
@@ -884,17 +459,11 @@ body {
     left: 0;
     padding: 0 10px;
 }
-<<<<<<< HEAD
 
 .header__logo img {
     width: 85px;
 }
 
-=======
-.header__logo img {
-    width: 85px;
-}
->>>>>>> origin/main
 .header__nav {
     max-width: 290px;
     padding: 0;
@@ -902,10 +471,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .header__btn-main-new {
     width: 178px;
     height: 30px;
@@ -918,183 +484,28 @@ body {
     font-weight: 500;
     margin-right: 20px;
 }
-<<<<<<< HEAD
 
 .header__btn-main-new a {
     color: #ffffff;
 }
 
-=======
-.header__btn-main-new a {
-    color: #ffffff;
-}
-.header__user {
-    height: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    line-height: 20px;
-    color: #565eef;
-}
-.header__user::after {
-    content: "";
-    display: block;
-    width: 6px;
-    height: 6px;
-    border-radius: 1px;
-    border-left: 1.9px solid #565eef;
-    border-bottom: 1.9px solid #565eef;
-    transform: rotate(-45deg);
-    margin: -6px 0 0 5px;
-    padding: 0;
-}
-.header__pop-user-set {
-    display: none;
-    position: absolute;
-    top: 61px;
-    right: 0;
-    width: 213px;
-    height: 205px;
-    border-radius: 10px;
-    border: 0.7px solid rgba(148, 166, 190, 0.4);
-    background: #fff;
-    box-shadow: 0px 10px 39px 0px rgba(26, 56, 101, 0.21);
-    padding: 34px;
-    text-align: center;
-    z-index: 2;
-}
->>>>>>> origin/main
 
 .main {
     width: 100%;
     background-color: #eaeef6;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .main__block {
     width: 100%;
     margin: 0 auto;
     padding: 25px 0 49px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 .main__content {
     width: 100%;
     display: flex;
 }
-<<<<<<< HEAD
 
-=======
-.main__column {
-    width: 20%;
-    margin: 0 auto;
-    display: block;
-}
-
-.column__title {
-    padding: 0 10px;
-    margin: 15px 0;
-}
-.column__title p {
-    color: #94a6be;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-.cards {
-    width: 100%;
-    display: block;
-    position: relative;
-}
-.cards__item {
-    padding: 5px;
-    animation-name: card-animation;
-    animation-duration: 500ms;
-    animation-timing-function: linear;
-}
-.cards__card {
-    width: 220px;
-    height: 130px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: stretch;
-    padding: 15px 13px 19px;
-}
-
-.card__group {
-    width: 100%;
-    height: 20px;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.card__theme {
-    width: auto;
-    height: 20px;
-    padding: 5px 14px;
-    border-radius: 18px;
-}
-.card__theme p {
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 10px;
-}
-.card__btn {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 2px;
-}
-.card__btn div {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: #94a6be;
-}
-.card__title {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 18px;
-    color: #000000;
-    margin-bottom: 10px;
-}
-.card__content {
-    height: 64px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.card__date {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-.card__date svg {
-    width: 13px;
-}
-.card__date p {
-    margin-left: 6px;
-    font-size: 10px;
-    line-height: 13px;
-    color: #94a6be;
-    letter-spacing: 0.2px;
-}
->>>>>>> origin/main
 
 @media screen and (max-width: 1200px) {
     .main__block {
@@ -1102,35 +513,23 @@ body {
         margin: 0 auto;
         padding: 40px 0 64px;
     }
-<<<<<<< HEAD
 
     .main__content {
         display: block;
     }
 
-=======
-    .main__content {
-        display: block;
-    }
->>>>>>> origin/main
     .main__column {
         width: 100%;
         margin: 0 auto;
         display: block;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .cards {
         width: 100%;
         display: flex;
         overflow-y: auto;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .cards__card {
         width: 220px;
         height: 130px;
@@ -1143,23 +542,16 @@ body {
         padding: 15px 13px 19px;
     }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 @media screen and (max-width: 660px) {
     .pop-new-card {
         top: 70px;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .pop-new-card__container {
         padding: 0;
         justify-content: flex-start;
     }
-<<<<<<< HEAD
 
     .pop-new-card__block {
         border-radius: 0;
@@ -1169,36 +561,21 @@ body {
         display: block;
     }
 
-=======
-    .pop-new-card__block {
-        border-radius: 0;
-    }
-    .pop-new-card__wrap {
-        display: block;
-    }
->>>>>>> origin/main
     .calendar {
         max-width: 340px;
         width: 100%;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .calendar__ttl,
     .calendar__nav,
     .calendar__period {
         padding: 0;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .calendar .date-create {
         display: none;
         margin-bottom: 7px;
     }
-<<<<<<< HEAD
 
     .calendar__p {
         font-size: 14px;
@@ -1208,14 +585,6 @@ body {
         font-size: 14px;
     }
 
-=======
-    .calendar__p {
-        font-size: 14px;
-    }
-    .calendar__day-name {
-        font-size: 14px;
-    }
->>>>>>> origin/main
     .calendar__cells {
         width: 344px;
         height: auto;
@@ -1223,58 +592,37 @@ body {
         flex-wrap: wrap;
         justify-content: space-around;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .calendar__cell {
         width: 42px;
         height: 42px;
         font-size: 14px;
     }
-<<<<<<< HEAD
 
     .pop-browse {
         top: 70px;
     }
 
-=======
-    .pop-browse {
-        top: 70px;
-    }
->>>>>>> origin/main
     .pop-browse__container {
         padding: 0;
         justify-content: flex-start;
     }
-<<<<<<< HEAD
 
     .pop-browse__block {
         border-radius: 0;
     }
 
-=======
-    .pop-browse__block {
-        border-radius: 0;
-    }
->>>>>>> origin/main
     .pop-browse__wrap {
         display: block;
     }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 @media screen and (max-width: 495px) {
     .container {
         width: 100%;
         padding: 0 16px;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .header__btn-main-new {
         z-index: 3;
         position: fixed;
@@ -1286,69 +634,44 @@ body {
         border-radius: 4px;
         margin-right: 0;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .pop-new-card__container {
         padding: 0;
         justify-content: flex-start;
     }
-<<<<<<< HEAD
 
     .pop-new-card__block {
         padding: 20px 16px 32px;
     }
 
-=======
-    .pop-new-card__block {
-        padding: 20px 16px 32px;
-    }
->>>>>>> origin/main
     .pop-new-card__form {
         max-width: 100%;
         width: 100%;
         display: block;
     }
-<<<<<<< HEAD
 
     .pop-new-card__calendar {
         width: 100%;
     }
 
-=======
-    .pop-new-card__calendar {
-        width: 100%;
-    }
->>>>>>> origin/main
     .form-new__area {
         max-width: 100%;
         height: 34px;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .form-new__create {
         width: 100%;
         height: 40px;
     }
-<<<<<<< HEAD
 
     .pop-browse__block {
         padding: 20px 16px 32px;
     }
 
-=======
-    .pop-browse__block {
-        padding: 20px 16px 32px;
-    }
->>>>>>> origin/main
     .pop-browse__content .theme-down {
         display: block;
         margin-bottom: 20px;
     }
-<<<<<<< HEAD
 
     .pop-browse__content .theme-top {
         display: none;
@@ -1362,83 +685,48 @@ body {
         width: 100%;
     }
 
-=======
-    .pop-browse__content .theme-top {
-        display: none;
-    }
-    .pop-browse__form {
-        max-width: 100%;
-    }
-    .pop-browse__calendar {
-        width: 100%;
-    }
->>>>>>> origin/main
     .pop-browse__btn-browse button,
     .pop-browse__btn-edit button {
         width: 100%;
         height: 40px;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .pop-browse__btn-browse .btn-group,
     .pop-browse__btn-edit .btn-group {
         width: 100%;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .pop-browse__btn-browse .btn-group button,
     .pop-browse__btn-edit .btn-group button {
         margin-right: 0px;
     }
-<<<<<<< HEAD
 
     .form-browse__area {
         max-width: 100%;
     }
 
-=======
-    .form-browse__area {
-        max-width: 100%;
-    }
->>>>>>> origin/main
     .form-browse__area {
         height: 37px;
     }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 @media only screen and (max-width: 375px) {
     .pop-exit__block {
         padding: 50px 20px;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .pop-exit__exit-yes {
         width: 100%;
         height: 40px;
         margin-right: 0;
         margin-bottom: 10px;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .pop-exit__exit-no {
         width: 100%;
         height: 40px;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     .pop-exit__form-group {
         display: block;
     }
