@@ -1,37 +1,42 @@
 import React from "react";
-import "./Card.css";
+import "./Card.styled.js";
+import {
+    CarsdsContainer,
+    CardsItem,
+    CardsCard,
+    CardGroup,
+    CardTheme,
+    CardThemeTopic,
+    CardButton,
+    CardBtn,
+    CardTitle,
+    CardContent,
+    CardDate,
+    themeStyles,
+} from "./Card.styled.js";
 
-const Card = ({ card }) => {
-    const themeClasses = {
-        "Web Design": "_orange",
-        Research: "_green",
-        Copywriting: "_purple",
-    };
+const Card = ({card}) => {
+    // Извлекаем класс для текущей темы, если он есть
+    const topicStyle = themeStyles[card.topic] || "";
 
-    const topicClass = themeClasses[card.topic] || "";
-
-    return (
-        <div className="cards__item">
-            <div className="cards__card card">
-                <div className="card__group">
-                    <div
-                        className={`card__theme ${topicClass}`}
-                    >
-                        <p>{card.topic}</p>
-                    </div>
-                    <a href="#popBrowse" target="_self">
-                        <div className="card__btn">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </a>
-                </div>
-                <div className="card__content">
+    return (<CarsdsContainer>
+        <CardsItem>
+            <CardsCard>
+                <CardGroup>
+                    <CardTheme style={topicStyle}>
+                        <CardThemeTopic>{card.topic}</CardThemeTopic>
+                    </CardTheme>
+                    <CardButton href="#popBrowse" target="_self">
+                        <CardBtn/>
+                        <CardBtn/>
+                        <CardBtn/>
+                    </CardButton>
+                </CardGroup>
+                <CardContent>
                     <a href="" target="_blank">
-                        <h3 className="card__title">{card.title}</h3>
+                        <CardTitle>{card.title}</CardTitle>
                     </a>
-                    <div className="card__date">
+                    <CardDate>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -56,16 +61,16 @@ const Card = ({ card }) => {
                             </g>
                             <defs>
                                 <clipPath id="clip0_1_415">
-                                    <rect width="13" height="13" fill="white" />
+                                    <rect width="13" height="13" fill="white"/>
                                 </clipPath>
                             </defs>
                         </svg>
                         <p>{card.date}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+                    </CardDate>
+                </CardContent>
+            </CardsCard>
+        </CardsItem>
+    </CarsdsContainer>);
 };
 
 export default Card;

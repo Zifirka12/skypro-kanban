@@ -1,87 +1,92 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import Header from "../Header/Header.jsx";
 import cardList from "../../data.js";
 import Column from "../Column/Column.jsx";
 import "./App.css";
+import {
+    AppLoadingMessage,
+    AppWrapper,
+    PopExit,
+    PopExitContainer,
+    PopExitBlock,
+    PopExitTtl,
+    PopExitForm,
+    PopExitFormGroup,
+    PopExitBtnYes,
+    PopExitBtnNo,
+    Main,
+    MainContainer,
+    MainBlock,
+    MainContent,
+} from "./App.styled.js";
 import PopBrowse from "../popups/PopBrowse/PopBrowse.jsx";
 import PopNewCard from "../popups/PopNewCard/PopNewCard.jsx";
 
-const columns = [
-    "Без статуса",
-    "Нужно сделать",
-    "В работе",
-    "Тестирование",
-    "Готово",
-];
+const columns = ["Без статуса", "Нужно сделать", "В работе", "Тестирование", "Готово",];
 
+// Группировка карточек по колонкам
 const groupedCards = columns.reduce((acc, status) => {
     acc[status] = cardList.filter((card) => card.status === status);
     return acc;
 }, {});
 
 function App() {
+    // Состояние для отслеживания загрузки данных
     const [isLoading, setIsLoading] = useState(true);
 
+    // Имитация загрузки данных (например, через setTimeout)
     useEffect(() => {
         const timer = setTimeout(() => {
-            setIsLoading(false);
+            setIsLoading(false); // Загрузка завершена через 2 секунды
         }, 2000);
 
-        return () => clearTimeout(timer);
+        return () => clearTimeout(timer); // Очищаем таймер при размонтировании
     }, []);
     if (isLoading) {
-        return <div className="loading-message">Данные загружаются...</div>;
+        return <AppLoadingMessage>Данные загружаются...</AppLoadingMessage>;
     }
 
-    return (
-        <>
-            <div className="wrapper">
-                {/* pop-up start */}
-                <div className="pop-exit" id="popExit">
-                    <div className="pop-exit__container">
-                        <div className="pop-exit__block">
-                            <div className="pop-exit__ttl">
-                                <h2>Выйти из аккаунта?</h2>
-                            </div>
-                            <form className="pop-exit__form" id="formExit" action="#">
-                                <div className="pop-exit__form-group">
-                                    <button className="pop-exit__exit-yes _hover01" id="exitYes">
-                                        <a href="modal/signin.html">Да, выйти</a>
-                                    </button>
-                                    <button className="pop-exit__exit-no _hover03" id="exitNo">
-                                        <a href="main.html">Нет, остаться</a>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <PopNewCard />
-                <PopBrowse />
+    return (<>
+        <AppWrapper>
+            <PopExit id="popExit">
+                <PopExitContainer>
+                    <PopExitBlock>
+                        <PopExitTtl>
+                            <h2>Выйти из аккаунта?</h2>
+                        </PopExitTtl>
+                        <PopExitForm id="formExit" action="#">
+                            <PopExitFormGroup>
+                                <PopExitBtnYes id="exitYes">
+                                    <a href="modal/signin.html">Да, выйти</a>
+                                </PopExitBtnYes>
+                                <PopExitBtnNo id="exitNo">
+                                    <a href="main.html">Нет, остаться</a>
+                                </PopExitBtnNo>
+                            </PopExitFormGroup>
+                        </PopExitForm>
+                    </PopExitBlock>
+                </PopExitContainer>
+            </PopExit>
+            <PopNewCard/>
+            <PopBrowse/>
 
+            <Header/>
 
-                {/* pop-up end */}
-
-                <Header />
-
-                <main className="main">
-                    <div className="container">
-                        <div className="main__block">
-                            <div className="main__content">
-                                {columns.map((status) => (
-                                    <Column
-                                        key={status}
-                                        title={status}
-                                        cards={groupedCards[status] || []}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-        </>
-    );
+            <Main>
+                <MainContainer>
+                    <MainBlock>
+                        <MainContent>
+                            {columns.map((status) => (<Column
+                                key={status}
+                                title={status}
+                                cards={groupedCards[status] || []}
+                            />))}
+                        </MainContent>
+                    </MainBlock>
+                </MainContainer>
+            </Main>
+        </AppWrapper>
+    </>);
 }
 
 export default App;
