@@ -99,24 +99,3 @@ export const CalendarNavAction = styled.div`
         fill: #94a6be;
     }
 `;
-
-/*
-
-
-._other-month {
-  opacity: 0;
-}
-
-._cell-day:hover {
-  color: #94a6be;
-  background-color: #eaeef6;
-}
-
-._active-day {
-  background-color: #94a6be;
-  color: #ffffff;
-}
-
-._current {
-  font-weight: 700;
-} */
