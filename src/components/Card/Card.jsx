@@ -1,37 +1,56 @@
 import React from "react";
-import "./Card.css";
+import styled from "styled-components";
+import {Link, useParams} from "react-router-dom";
+import "./Card.styled.js";
+import {
+    CarsdsContainer,
+    CardsItem,
+    CardsCard,
+    CardGroup,
+    CardTheme,
+    CardThemeTopic,
+    CardButton,
+    CardBtn,
+    CardTitle,
+    CardContent,
+    CardDate,
+    themeStyles,
+} from "./Card.styled.js";
 
-const Card = ({ card }) => {
-    const themeClasses = {
-        "Web Design": "_orange",
-        Research: "_green",
-        Copywriting: "_purple",
-    };
+const CardID = styled.div`
+    display: flex;
 
-    const topicClass = themeClasses[card.topic] || "";
+    &p {
+        font-size: 12px;
+    }
+`;
 
-    return (
-        <div className="cards__item">
-            <div className="cards__card card">
-                <div className="card__group">
-                    <div
-                        className={`card__theme ${topicClass}`}
-                    >
-                        <p>{card.topic}</p>
-                    </div>
-                    <a href="#popBrowse" target="_self">
-                        <div className="card__btn">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </a>
-                </div>
-                <div className="card__content">
-                    <a href="" target="_blank">
-                        <h3 className="card__title">{card.title}</h3>
-                    </a>
-                    <div className="card__date">
+const Card = ({card}) => {
+    const {id} = useParams(); // Извлекаем id из URL с помощью useParams
+    const topicStyle = themeStyles[card.topic] || "";
+
+    return (<CarsdsContainer>
+        <CardsItem>
+            <CardsCard>
+                <CardGroup>
+                    <CardTheme style={topicStyle}>
+                        <CardThemeTopic>{card.topic}</CardThemeTopic>
+                    </CardTheme>
+
+                    {/* Если popBrowse — отдельная страница */}
+                    {/* <CardButton as={Link} to="/popBrowse"> */}
+                    <CardButton href="#popBrowse" target="_self">
+                        <CardBtn/>
+                        <CardBtn/>
+                        <CardBtn/>
+                    </CardButton>
+                </CardGroup>
+                <CardContent>
+                    <Link to={`/cards/${card.id}`}>
+                        <CardTitle>{card.title}</CardTitle>
+                    </Link>
+
+                    <CardDate>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="13"
@@ -56,16 +75,25 @@ const Card = ({ card }) => {
                             </g>
                             <defs>
                                 <clipPath id="clip0_1_415">
-                                    <rect width="13" height="13" fill="white" />
+                                    <rect width="13" height="13" fill="white"/>
                                 </clipPath>
                             </defs>
                         </svg>
                         <p>{card.date}</p>
-                    </div>
+                    </CardDate>
+                </CardContent>
+                {/* Отображаем id карточки на странице */}
+                <div
+                    style={{
+                        position: "absolute", bottom: "8px", left: "16px", color: "#A0A0A0", fontSize: "8px",
+                    }}
+                >
+                    <p>Card ID: {id}</p>{" "}
+                    {/* Это будет отображать id карточки, полученный из URL */}
                 </div>
-            </div>
-        </div>
-    );
+            </CardsCard>
+        </CardsItem>
+    </CarsdsContainer>);
 };
 
 export default Card;
