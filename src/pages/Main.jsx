@@ -8,6 +8,7 @@ import {
 import PopBrowse from "../components/popups/PopBrowse/PopBrowse.jsx";
 import PopNewCard from "../components/popups/PopNewCard/PopNewCard.jsx";
 import {fetchTasks} from "../services/api.js";
+import cardList from "../data.js";
 
 const columns = ["Без статуса", "Нужно сделать", "В работе", "Тестирование", "Готово",];
 
@@ -16,22 +17,30 @@ const MainPage = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        // Изначально загружаем данные из data.js
+        setTasks(cardList);
+        setIsLoading(false);
+        
+        // Пытаемся загрузить данные из API, если токен есть
         const userInfo = JSON.parse(localStorage.getItem("userInfo"));
         const token = userInfo?.token;
 
         if (!token) {
-            console.error("Нет токена");
+            console.log("Нет токена, используем данные из data.js");
             return;
         }
 
         async function loadTasks() {
             try {
                 const data = await fetchTasks({token});
-                setTasks(data);
+                // Если API вернул данные, используем их
+                if (data && data.length > 0) {
+                    setTasks(data);
+                    console.log("Загружены данные из API");
+                }
             } catch (err) {
                 console.error("Ошибка загрузки задач:", err.message);
-            } finally {
-                setIsLoading(false);
+                console.log("Используем данные из data.js");
             }
         }
 

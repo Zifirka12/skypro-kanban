@@ -157,3 +157,11 @@ export const MainContent = styled.div`
     width: 100%;
     display: flex;
 `;
+
+export const PageWrapper = styled.div`
+    max-width: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #f1f1f1;
+`;
