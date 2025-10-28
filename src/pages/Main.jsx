@@ -5,8 +5,6 @@ import "../components/App/App.css";
 import {
     AppWrapper, Main, MainContainer, MainBlock, MainContent, AppLoadingMessage,
 } from "../components/App/App.styled.js";
-import PopBrowse from "../components/popups/PopBrowse/PopBrowse.jsx";
-import PopNewCard from "../components/popups/PopNewCard/PopNewCard.jsx";
 import {fetchTasks} from "../services/api.js";
 import cardList from "../data.js";
 
@@ -58,8 +56,6 @@ const MainPage = () => {
     }
 
     return (<AppWrapper>
-        <PopNewCard/>
-        <PopBrowse/>
         <Header/>
         <Main>
             <MainContainer>
