@@ -37,10 +37,8 @@ import {
     CategoriesP,
     CategoriesTheme,
 } from "../../popups/PopNewCard/PopNewCard.styled.js";
-import { Link, useParams } from "react-router-dom";
 
 function PopBrowse() {
-    const { id } = useParams();
     return (
         <PopBrowseCnt id="popBrowse">
             <PopBrowseContainer>
@@ -139,14 +137,14 @@ function PopBrowse() {
                         <PopBrowseBtn>
                             <PopBrowseBtnGroup>
                                 <PopBrowseBtnEdit>
-                                    <Link to={`/cards/${id}`}>Редактировать задачу</Link>
+                                    <a href="#">Редактировать задачу</a>
                                 </PopBrowseBtnEdit>
                                 <PopBrowseBtnDelete>
                                     <a href="#">Удалить задачу</a>
                                 </PopBrowseBtnDelete>
                             </PopBrowseBtnGroup>
                             <BtnBrowseCloseEdit>
-                                <Link to="/">Закрыть</Link>
+                                <a href="#">Закрыть</a>
                             </BtnBrowseCloseEdit>
                         </PopBrowseBtn>
                         <PopBrowseBtn className=" _hide">

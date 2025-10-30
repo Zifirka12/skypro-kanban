@@ -26,6 +26,7 @@ const CardID = styled.div`
 `;
 
 const Card = ({card}) => {
+
     const topicStyle = themeStyles[card.topic] || "";
 
     return (<CarsdsContainer>
@@ -36,8 +37,9 @@ const Card = ({card}) => {
                         <CardThemeTopic>{card.topic}</CardThemeTopic>
                     </CardTheme>
 
-                    {/* Кнопка "три точки" ведёт на просмотр/редактирование карточки */}
-                    <CardButton as={Link} to={`/cards/${card.id}`}>
+                    {/* Если popBrowse — отдельная страница */}
+                    {/* <CardButton as={Link} to="/popBrowse"> */}
+                    <CardButton href="#popBrowse" target="_self">
                         <CardBtn/>
                         <CardBtn/>
                         <CardBtn/>
@@ -80,7 +82,15 @@ const Card = ({card}) => {
                         <p>{card.date}</p>
                     </CardDate>
                 </CardContent>
-                {/* Примечание: id видно в URL /cards/:id */}
+                {/* Отображаем id карточки на странице */}
+                <div
+                    style={{
+                        position: "absolute", bottom: "8px", left: "16px", color: "#A0A0A0", fontSize: "8px",
+                    }}
+                >
+                    <p>Card ID: {card.id}</p>
+                    {/* Это будет отображать id карточки, полученный из URL */}
+                </div>
             </CardsCard>
         </CardsItem>
     </CarsdsContainer>);

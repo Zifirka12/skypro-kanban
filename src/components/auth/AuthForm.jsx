@@ -1,13 +1,16 @@
 import {signIn, signUp} from "../../services/auth.js";
 import {useNavigate} from "react-router-dom";
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import BaseInput from "../BaseInput/BaseInput.jsx";
 import {
     BaseButton, WrapperWindow, ModalWindowStart, WrapperWindowTitle, InputStart, FormGroupStart, StyledLink,
 } from "./AuthForm.styled.js";
 
-const AuthForm = ({isSignUp, setIsAuth}) => {
+import {AuthContext} from "../context/AuthContext.js";
+
+const AuthForm = ({isSignUp}) => {
     const navigate = useNavigate();
+    const {updateUserInfo} = useContext(AuthContext);
 
     const [formData, setFormData] = useState({
         name: "", login: "", password: "",
@@ -54,7 +57,6 @@ const AuthForm = ({isSignUp, setIsAuth}) => {
         setError("");
     };
 
-    // функция отправки формы
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateForm()) {
@@ -66,8 +68,7 @@ const AuthForm = ({isSignUp, setIsAuth}) => {
             }) : await signUp(formData);
 
             if (data) {
-                setIsAuth(true);
-                localStorage.setItem("userInfo", JSON.stringify(data));
+                updateUserInfo(data);
                 navigate("/");
             }
         } catch (err) {

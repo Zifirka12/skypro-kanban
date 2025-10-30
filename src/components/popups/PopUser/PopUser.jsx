@@ -32,7 +32,7 @@ const UserProfile = () => {
     const handleExit = () => {
         setPopExitVisible(false);
 
-        navigate("/sign-in");
+        navigate("/exit");
     };
 
     useEffect(() => {

@@ -11,7 +11,6 @@ import {
     HeaderNav,
     HeaderBtn,
 } from "./Header.styled.js";
-import { Link } from "react-router-dom";
 
 function Header() {
     return (
@@ -30,7 +29,7 @@ function Header() {
                     </HeaderLogo>
                     <HeaderNav>
                         <HeaderBtn className="_hover01" id="btnMainNew">
-                            <Link to="/add-task">Создать новую задачу</Link>
+                            <a href="#popNewCard">Создать новую задачу</a>
                         </HeaderBtn>
                         <UserProfile />
                     </HeaderNav>
