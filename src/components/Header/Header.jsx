@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./Header.styled.js";
 import UserProfile from "../popups/PopUser/PopUser.jsx";
@@ -13,6 +14,12 @@ import {
 } from "./Header.styled.js";
 
 function Header() {
+    const navigate = useNavigate();
+    const handleCreateTask = (e) => {
+        e.preventDefault();
+        navigate("/add-task");
+    };
+
     return (
         <HeaderContainer>
             <ContainerH>
@@ -29,7 +36,7 @@ function Header() {
                     </HeaderLogo>
                     <HeaderNav>
                         <HeaderBtn className="_hover01" id="btnMainNew">
-                            <a href="#popNewCard">Создать новую задачу</a>
+                            <a href="#" onClick={handleCreateTask}>Создать новую задачу</a>
                         </HeaderBtn>
                         <UserProfile />
                     </HeaderNav>

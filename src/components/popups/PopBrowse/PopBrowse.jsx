@@ -1,4 +1,5 @@
 import Calendar from "../../Calendar/Calendar.jsx";
+import { useNavigate } from "react-router-dom";
 import {
     CalendarContainer,
     CalendarTtl,
@@ -39,6 +40,12 @@ import {
 } from "../../popups/PopNewCard/PopNewCard.styled.js";
 
 function PopBrowse() {
+    const navigate = useNavigate();
+    const handleClose = (e) => {
+        e.preventDefault();
+        navigate(-1);
+    };
+
     return (
         <PopBrowseCnt id="popBrowse">
             <PopBrowseContainer>
@@ -119,7 +126,7 @@ function PopBrowse() {
                                     <input type="hidden" id="datepick_value" value="08.09.2023" />
                                     <CalendarPeriod>
                                         <CalendarP className=" date-end">
-                                            Срок исполнения:{" "}
+                                            Срок исполнения: {" "}
                                             <span className="date-control">09.09.23</span>
                                         </CalendarP>
                                     </CalendarPeriod>
@@ -144,7 +151,7 @@ function PopBrowse() {
                                 </PopBrowseBtnDelete>
                             </PopBrowseBtnGroup>
                             <BtnBrowseCloseEdit>
-                                <a href="#">Закрыть</a>
+                                <a href="#" onClick={handleClose}>Закрыть</a>
                             </BtnBrowseCloseEdit>
                         </PopBrowseBtn>
                         <PopBrowseBtn className=" _hide">
@@ -160,7 +167,7 @@ function PopBrowse() {
                                 </PopBrowseBtnDelete>
                             </PopBrowseBtnGroup>
                             <BtnBrowseCloseEdit>
-                                <a href="#">Закрыть</a>
+                                <a href="#" onClick={handleClose}>Закрыть</a>
                             </BtnBrowseCloseEdit>
                         </PopBrowseBtn>
                     </PopBrowseContent>
